@@ -1,0 +1,148 @@
+/* ================= RESET / BASE ================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.hero-text h2 {
+  margin-top: 0.5rem;
+  color: #2563eb;
+}
+
+.hero-text p {
+  margin: 1.5rem 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Visual placeholder */
+.visual-box {
+  background: #e2e8f0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-list {
+  list-style: none;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
