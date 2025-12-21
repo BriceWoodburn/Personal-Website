@@ -63,6 +63,19 @@ nav a {
   
 }
 
+.LP-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide 1.2s ease forwards;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .LP-text h1 {
   font-size: 6rem;
   padding-bottom: 0%;
@@ -93,6 +106,30 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+
+.parallax-circles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.parallax-circles .circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.parallax-circles .circle:nth-child(1) { width: 100px; height: 100px; top: 20%; left: 15%; }
+.parallax-circles .circle:nth-child(2) { width: 80px; height: 80px; top: 70%; left: 25%; }
+.parallax-circles .circle:nth-child(3) { width: 120px; height: 120px; top: 40%; left: 75%; }
+.parallax-circles .circle:nth-child(4) { width: 60px; height: 60px; top: 65%; left: 50%; }
+.parallax-circles .circle:nth-child(5) { width: 90px; height: 90px; top: 35%; left: 85%; }
+.parallax-circles .circle:nth-child(6) { width: 70px; height: 70px; top: 10%; left: 60%; }
+.parallax-circles .circle:nth-child(7) { width: 50px; height: 50px; top: 50%; left: 10%; }
+.parallax-circles .circle:nth-child(8) { width: 110px; height: 110px; top: 80%; left: 70%; }
 /* ================= BUTTONS ================= */
 
 .btn {
@@ -110,11 +147,13 @@ nav a {
 }
 
 .primary {
+  background: #f8fafc;
   border: 1px solid #2563eb;
   color: #2563eb;
 }
 
 .secondary {
+  background: #f8fafc;
   border: 1px solid #2563eb;
   color: #2563eb;
 }
