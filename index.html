@@ -19,7 +19,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -63,126 +62,150 @@
     </div>
   </section>
 
-
-  <!-- ================= ABOUT ================= -->
+  <section id="main-page">
+<!-- ================= ABOUT ================= -->
   <section id="about" class="section about">
-  <h2>About Me</h2>
+    <h2>About Me</h2>
 
-  <div class="about-grid">
-    <!-- Story -->
-      <div class="about-text fade-in" style="--delay: 0s">
-        <p class="greeting">
-          Hi, I'm Brice!
-        </p>
-        
-        <p>
-          A junior Computing and Information Sciences student at RIT with a focus in Game Development who has a passion for learning, building, and making a difference through technology. I see technology as a powerful tool to create solutions for real-world problems that improve people’s lives. Driven by curiosity and a desire to grow, I’m motivated to make a positive difference in the world.
-        </p>
+    <div class="about-grid">
+      <!-- Story -->
+        <div class="about-text fade-in" style="--delay: 0s">
+          <p class="greeting">
+            Hi, I'm Brice!
+          </p>
+          
+          <p>
+            A junior Computing and Information Sciences student at RIT with a focus in Game Development who has a passion for learning, building, and making a difference through technology. I see technology as a powerful tool to create solutions for real-world problems that improve people’s lives. Driven by curiosity and a desire to grow, I’m motivated to make a positive difference in the world.
+          </p>
 
-        <p>
-          During my time as an IT Project Manager Intern at Wabtec, I gained experience in project management, public speaking, and communication, helping teams collaborate effectively and deliver results. Alongside my internship experience, I’ve gained a strong foundation in software engineering and web development through coursework and personal projects, where I enjoy turning ideas into practical solutions.
-        </p>
+          <p>
+            During my time as an IT Project Manager Intern at Wabtec, I gained experience in project management, public speaking, and communication, helping teams collaborate effectively and deliver results. Alongside my internship experience, I’ve gained a strong foundation in software engineering and web development through coursework and personal projects, where I enjoy turning ideas into practical solutions.
+          </p>
+        </div>
+
+      <!-- Highlights -->
+      <div class="about-highlights fade-in" style="--delay: 0.15s">
+        <div class="highlight-card">
+          <h3>Education</h3>
+          <p>Game Design and Development student at RIT</p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Experience</h3>
+          <p>IT Project Management Intern at Wabtec</p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Focus</h3>
+          <p>Full-Stack Software Engineering, Simulations, and Project Management</p>
+        </div>
       </div>
+    </div>
 
-    <!-- Highlights -->
-    <div class="about-highlights fade-in" style="--delay: 0.15s">
-      <div class="highlight-card">
-        <h3>Education</h3>
-        <p>Game Design and Development student at RIT</p>
-      </div>
+    <div class="resume-callout fade-in" style="--delay: 0.3s">
+          <h3>Want the full story?</h3>
+          <p>Download my resume to see my experience, skills, and projects in detail.</p>
 
-      <div class="highlight-card">
-        <h3>Experience</h3>
-        <p>IT Project Management Intern at Wabtec</p>
+          <a href="assets/resume.pdf" class="btn-resume" target="_blank" rel="noopener">
+            View Resume
+          </a>
       </div>
+  </section>
 
-      <div class="highlight-card">
-        <h3>Focus</h3>
-        <p>Full-Stack Software Engineering, Simulations, and Project Management</p>
-      </div>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section skills">
+  <h2>Skills</h2>
+
+  <!-- Row 1 -->
+  <div class="skills-row">
+    <div class="skills-info">
+      <h3>Programming & Development</h3>
+      <p>How I build projects</p>
+    </div>
+
+    <div class="skills-list">
+      <div class="skill-card"><img src="images/c++_logo.png"><span>C++</span></div>
+      <div class="skill-card"><img src="images/csharp_logo.svg"><span>C#</span></div>
+      <div class="skill-card"><img src="images/python_logo.png"><span>Python</span></div>
+      <div class="skill-card"><img src="images/sql_logo.png"><span>SQL</span></div>
+      <div class="skill-card"><img src="images/js_logo.png"><span>JavaScript</span></div>
+      <div class="skill-card"><img src="images/html_logo.png"><span>HTML5</span></div>
+      <div class="skill-card"><img src="images/css_logo.svg"><span>CSS</span></div>
+      <div class="skill-card"><img src="images/fastapi_logo.svg"><span>FastAPI</span></div>
+      <div class="skill-card"><img src="images/chartjs_logo.svg"><span>Chart.js</span></div>
+      <div class="skill-card"><img src="images/box2d_logo.svg"><span>Box2D</span></div>
     </div>
   </div>
 
-  <div class="resume-callout fade-in" style="--delay: 0.3s">
-        <h3>Want the full story?</h3>
-        <p>Download my resume to see my experience, skills, and projects in detail.</p>
-
-        <a href="assets/resume.pdf" class="btn-resume" target="_blank" rel="noopener">
-          View Resume
-        </a>
+  <!-- Row 2 -->
+  <div class="skills-row reverse">
+    <div class="skills-info">
+      <h3>Game Engines & Platforms</h3>
+      <p>Where I build projects</p>
     </div>
+
+    <div class="skills-list">
+      <div class="skill-card"><img src="images/unity_logo.png"><span>Unity</span></div>
+      <div class="skill-card"><img src="images/unreal_logo.svg"><span>Unreal Engine</span></div>
+      <div class="skill-card"><img src="images/postgresql_logo.svg"><span>PostgreSQL</span></div>
+      <div class="skill-card"><img src="images/unity_logo.png"><span>Supabase</span></div>
+      <div class="skill-card"><img src="images/unity_logo.png"><span>PowerApps</span></div>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="skills-row">
+    <div class="skills-info">
+      <h3>Tools, Workflow & Design</h3>
+      <p>How I plan and design projects</p>
+    </div>
+
+    <div class="skills-list">
+      <div class="skill-card"><img src="assets/icons/git.svg"><span>Git</span></div>
+      <div class="skill-card"><img src="assets/icons/agile.svg"><span>Agile / Scrum</span></div>
+      <div class="skill-card"><img src="assets/icons/sdlc.svg"><span>SDLC</span></div>
+      <div class="skill-card"><img src="assets/icons/rally.svg"><span>Rally</span></div>
+      <div class="skill-card"><img src="assets/icons/lucidchart.svg"><span>Lucidchart</span></div>
+      <div class="skill-card"><img src="assets/icons/figma.svg"><span>Figma</span></div>
+    </div>
+  </div>
 </section>
 
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
 
-  <!-- ================= SKILLS ================= -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
+      <div class="projects-grid">
 
-    <div class="skills-grid">
-      <div>
-        <h3>Languages</h3>
-        <ul>
-          <li>C++</li>
-          <li>C#</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-        </ul>
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Short description of what this project does.</p>
+          <p><strong>Tech:</strong> C#, Unity</p>
+          <a href="#">GitHub</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Project Title</h3>
+          <p>Short description of what this project does.</p>
+          <p><strong>Tech:</strong> JavaScript, PIXI.js</p>
+          <a href="#">GitHub</a>
+        </div>
+
       </div>
+    </section>
 
-      <div>
-        <h3>Tools & Engines</h3>
-        <ul>
-          <li>Unity</li>
-          <li>Unreal</li>
-          <li>MonoGame</li>
-          <li>PIXI.js</li>
-        </ul>
-      </div>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
 
-      <div>
-        <h3>Web</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>Project Title</h3>
-        <p>Short description of what this project does.</p>
-        <p><strong>Tech:</strong> C#, Unity</p>
-        <a href="#">GitHub</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Project Title</h3>
-        <p>Short description of what this project does.</p>
-        <p><strong>Tech:</strong> JavaScript, PIXI.js</p>
-        <a href="#">GitHub</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-
-    <ul class="contact-list">
-      <li>Email: youremail@email.com</li>
-      <li>GitHub: github.com/yourname</li>
-      <li>itch.io: yourname.itch.io</li>
-      <li>LinkedIn: linkedin.com/in/yourname</li>
-    </ul>
+      <ul class="contact-list">
+        <li>Email: youremail@email.com</li>
+        <li>GitHub: github.com/yourname</li>
+        <li>itch.io: yourname.itch.io</li>
+        <li>LinkedIn: linkedin.com/in/yourname</li>
+      </ul>
+    </section>
   </section>
 
   <!-- ================= FOOTER ================= -->
