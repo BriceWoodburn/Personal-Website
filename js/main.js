@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
+// Fade in
 const faders = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(
