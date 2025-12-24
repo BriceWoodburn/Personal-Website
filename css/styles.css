@@ -15,10 +15,13 @@ body {
 }
 
 #main-page{
+  position: relative;
   background: linear-gradient(
     180deg,
-    rgba(37, 99, 235, 0.03),
-    transparent
+    rgba(37, 99, 235, 0.035) 0%,
+    rgba(37, 99, 235, 0.02) 35%,
+    rgba(37, 99, 235, 0.01) 65%,
+    transparent 100%
   );
 }
 
@@ -379,13 +382,11 @@ h3{
   background-image:
     radial-gradient(circle at 60% 20%, rgba(37, 99, 235, 0.05) 0 80px, transparent 81px),
     radial-gradient(circle at 15% 62%, rgba(37, 99, 235, 0.05) 0 80px, transparent 81px),
-    radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.04) 0 60px, transparent 61px);
+    radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.05) 0 60px, transparent 61px);
   z-index: -1;
 }
 
 /* ================= SKILLS ================= */
-
-/* ================= SKILLS (ALTERNATING) ================= */
 
 .skills-row {
   display: grid;
@@ -395,7 +396,6 @@ h3{
   margin-top: 4rem;
 }
 
-/* Reverse layout for alternating rows */
 .skills-row.reverse {
   grid-template-columns: 2fr 1fr;
 }
@@ -408,18 +408,18 @@ h3{
   order: 1;
 }
 
-/* Category text */
 .skills-info h3 {
   color: #2563eb;
   margin-bottom: 0.25rem;
+  font-size: 1.4rem;
 }
 
 .skills-info p {
-  color: #475569;
+  color: black;
   max-width: 30ch;
+  font-size: 1.15rem;
 }
 
-/* Skills grid */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
@@ -459,7 +459,7 @@ h3{
 .skill-card span {
   font-size: 1rem;
   font-weight: 600;
-  color: #0f172a;
+  color: black;
 }
 
 .skill-card img {
@@ -481,6 +481,24 @@ h3{
 
 .skill-card:hover img {
   transform: scale(1.15);
+}
+
+.skills {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle at 70% 17%, rgba(37, 99, 235, 0.05) 0 60px, transparent 61px),
+    radial-gradient(circle at 35% 50%, rgba(37, 99, 235, 0.05) 0 70px, transparent 70px),
+    radial-gradient(circle at 88% 74%, rgba(37, 99, 235, 0.05) 0 85px, transparent 86px),
+    radial-gradient(circle at 27% 83%, rgba(37, 99, 235, 0.05) 0 50px, transparent 51px);
+  z-index: -1;
 }
 
 /* ================= PROJECTS ================= */
