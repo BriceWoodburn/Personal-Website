@@ -1,5 +1,16 @@
 * {box-sizing:border-box}
 
+body{
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: black;
+  background-color: #f8fafc;
+}
+
+h1{
+  font-family: ui-serf, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 /* ================= NAVBAR ================= */
 
 .navbar {
@@ -99,47 +110,71 @@ nav a:hover::after {
 .project-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
+  text-align: center;
 }
 
 .project-title {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 800;
-  text-align: center;
-  margin-bottom: 0.5rem;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+  letter-spacing: -1px;
 }
 
+/* ✨ Subtitle refinement */
 .project-subtitle {
-  text-align: center;
-  color: #555;
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  color: black;
 }
 
+/* 🚀 Button group */
 .project-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
 .btn {
-  padding: 0.75rem 1.3rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 1rem 1.25rem;
   text-decoration: none;
-  border: 2px solid #2563eb;
+  border-radius: 4px;
+  margin-top: 18px;
+  font-size: 1.5rem;
+
+  transition:
+  background-color 0.25s ease,
+  color 0.25s ease,
+  transform 0.25s ease,
+  box-shadow 0.25s ease;
 }
 
-.btn.primary {
-  background: #2563eb;
-  color: white;
-}
-
-.btn.secondary {
-  background: transparent;
+.primary {
+  background: #f8fafc;
+  border: 1px solid #2563eb;
   color: #2563eb;
 }
+
+.secondary {
+  background: #f8fafc;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+  color: white;
+
+  transform: translateY(-4px) scale(1.05);
+
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
 
 .project-section {
   margin: 3rem 0;
