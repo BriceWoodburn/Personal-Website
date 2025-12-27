@@ -11,6 +11,37 @@ h1{
   font-family: ui-serf, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  font-weight: 700;
+}
+
+h3{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+
+p{
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: black;
+}
+
+body{
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.035) 0%,
+    rgba(37, 99, 235, 0.02) 35%,
+    rgba(37, 99, 235, 0.01) 65%,
+    transparent 100%
+  );
+}
+
 /* ================= NAVBAR ================= */
 
 .navbar {
@@ -122,7 +153,6 @@ nav a:hover::after {
   font-size: 5rem;
   font-weight: 800;
   color: black;
-  margin-bottom: 0.75rem;
   letter-spacing: -1px;
 }
 
@@ -134,11 +164,39 @@ nav a:hover::after {
   color: black;
 }
 
+/* ================= OVERVIEW ================= */
+
+.overview-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.overview-buttons p{
+  margin-top: 0;
+}
+
+.overview-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.overview-buttons {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .btn {
   padding: 1rem 1.25rem;
   text-decoration: none;
   border-radius: 4px;
-  margin-top: 18px;
   font-size: 1.5rem;
 
   transition:
@@ -148,14 +206,7 @@ nav a:hover::after {
   box-shadow 0.25s ease;
 }
 
-.primary {
-  background: #f8fafc;
-  border: 1px solid #2563eb;
-  color: #2563eb;
-}
-
-.secondary {
-  background: #f8fafc;
+.overview {
   border: 1px solid #2563eb;
   color: #2563eb;
 }
@@ -169,7 +220,7 @@ nav a:hover::after {
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
 }
 
-.project-buttons {
+.overview-buttons {
   margin: 3rem auto 0;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 
@@ -183,40 +234,13 @@ nav a:hover::after {
   font-size: 1.15rem;
 }
 
-.project-buttons h3 {
-  margin-bottom: 0.5rem;
-  color: #2563eb;
-  font-size: 1.5rem;
-}
-
-/* ================= OVERVIEW ================= */
-
-.overview-content p {
-  text-align: left;
-  color: #475569;
-  font-size: 1.1rem;
-  line-height: 1.65;
-}
-
-.overview-content h2{
-  justify-self: left;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: black;
-  font-weight: 700;
-}
-
-
 /* ================= FEATURES ================= */
 
-/* Left Overview Section */
-.features-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: black;
-  font-weight: 700;
+.features-section{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 3rem;
 }
-
 
 /* Right Features Grid */
 .features-grid {
@@ -238,18 +262,6 @@ nav a:hover::after {
   transition: 0.25s ease;
 }
 
-.feature-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.35rem;
-  color: #2563eb;
-}
-
-.feature-card p {
-  font-size: 0.95rem;
-  color: #334155;
-  line-height: 1.5;
-}
-
 /* Hover Styling */
 .feature-card:hover {
   transform: translateY(-6px);
@@ -259,58 +271,46 @@ nav a:hover::after {
 
 
 /* ================= TECH STACK ================= */
-.tech-stack-container {
-  margin: 3rem 0;
-}
 
-.tech-stack-container h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: black;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.25rem;
+.tech-stack {
   max-width: 1100px;
   margin: 0 auto;
+  padding-top: 3rem;
 }
 
-.tech-layer {
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-align: left;
-  margin: 2rem auto 1rem;
-  max-width: 900px;
-  color: #2563eb;
+/* Rows and alternating layout */
+.skills-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* Skill cards */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 1.25rem;
 }
 
 .skill-card {
   position: relative;
-
   background: linear-gradient(
     180deg,
     #ffffff 0%,
     #f8fafc 100%
   );
-
   border: 1px solid rgba(37, 99, 235, 0.15);
   border-radius: 14px;
-
-  padding: .75rem 0.25rem;
+  padding: 0.75rem 0.25rem;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.65rem;
-
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.04),
     0 6px 16px rgba(37, 99, 235, 0.08);
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -332,9 +332,7 @@ nav a:hover::after {
 
 .skill-card:hover {
   transform: translateY(-6px) scale(1.05);
-
   border-color: #2563eb;
-
   box-shadow:
     0 12px 24px rgba(37, 99, 235, 0.25),
     0 6px 12px rgba(0, 0, 0, 0.06);
@@ -344,97 +342,115 @@ nav a:hover::after {
   transform: scale(1.15);
 }
 
-/* ================= CAROUSEL ================= */
-/* Slideshow container */
+/* ================= IMAGE CAROUSEL ================= */
+.carousel {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
 .slideshow-container {
-  max-width: 1000px;
   position: relative;
-  margin: auto;
+  border-radius: 1rem;
+  background: #f8fafc;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+  overflow: hidden;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
+/* Slide images */
 .mySlides img {
   width: 100%;
   height: 450px;
   object-fit: cover;
-  object-position: center;
-  border-radius: 8px; /* optional */
+  object-position: top;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Next & previous buttons */
+/* Caption outside the image */
+.caption {
+  display: block;
+  text-align: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;    
+  font-size: 1.15rem;
+  color: #2563eb;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Number text */
+.numbertext {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255,255,255,0.85);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Arrows */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  top: 43%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(37, 99, 235, 0.8);
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   user-select: none;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+.next { right: 1rem; }
+.prev { left: 1rem; }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  transform: scale(1.15);
+  background: rgba(37, 99, 235, 1);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+/* Dots */
+.dots-container {
   text-align: center;
+  margin-top: 1rem;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  height: 14px;
+  width: 14px;
+  margin: 0 3px;
+  background-color: #e2e8f0;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #2563eb;
+  transform: scale(1.2);
 }
 
-/* Fading animation */
+/* Fade animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {opacity: 0.4;}
+  to {opacity: 1;}
 }
