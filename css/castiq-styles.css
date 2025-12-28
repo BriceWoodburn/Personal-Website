@@ -31,16 +31,40 @@ p{
   color: black;
 }
 
-body{
+.project-container {
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(37, 99, 235, 0.035) 0%,
-    rgba(37, 99, 235, 0.02) 35%,
-    rgba(37, 99, 235, 0.01) 65%,
-    transparent 100%
-  );
 }
+
+.project-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle at 20% 8%, rgba(37, 99, 235, 0.05) 0 60px, transparent 61px),
+    radial-gradient(circle at 82% 13%, rgba(37, 99, 235, 0.05) 0 55px, transparent 56px),
+    radial-gradient(circle at 10% 27%, rgba(37, 99, 235, 0.05) 0 48px, transparent 49px),
+    radial-gradient(circle at 30% 33%, rgba(37, 99, 235, 0.05) 0 65px, transparent 66px),
+    radial-gradient(circle at 80% 47%, rgba(37, 99, 235, 0.05) 0 70px, transparent 71px),
+    radial-gradient(circle at 36% 59%, rgba(37, 99, 235, 0.05) 0 45px, transparent 46px),
+    radial-gradient(circle at 72% 65%, rgba(37, 99, 235, 0.05) 0 60px, transparent 61px),
+    radial-gradient(circle at 25% 75%, rgba(37, 99, 235, 0.05) 0 52px, transparent 53px);
+  z-index: -1;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-section[data-delay="1"] { transition-delay: 0.15s; }
+.fade-section[data-delay="2"] { transition-delay: 0.3s; }
 
 /* ================= NAVBAR ================= */
 
@@ -360,7 +384,7 @@ nav a:hover::after {
 /* Slide images */
 .mySlides img {
   width: 100%;
-  height: 450px;
+  height: 550px;
   object-fit: cover;
   object-position: top;
   border-radius: 0.75rem;

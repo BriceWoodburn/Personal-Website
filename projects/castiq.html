@@ -31,7 +31,7 @@
 
   <!-- ================= OVERVIEW ================= -->
   <div class="overview-buttons-container">
-    <div class="overview-text">
+    <div class="overview-text fade-section" data-delay="0">
       <h2>Overview</h2>
       <p>
         CastIQ allows users to record, view, and analyze their fishing 
@@ -51,7 +51,7 @@
       </p>
     </div>
 
-    <div class="overview-buttons">
+    <div class="overview-buttons fade-section" data-delay="1">
       <h3>Want to see for yourself?</h3>
       <p>Click the buttons below to visit the site yourself, or view the GitHub repository.</p>
       <a href="https://castiq.onrender.com/" class="btn overview" target="_blank">View Project</a>
@@ -60,7 +60,7 @@
 </div>
 
   <!-- ================= FEATURES ================= -->
-   <section class="features-section">
+   <section class="features-section fade-section">
     <h2>Features</h2>
     <div class="features-grid">
       <div class="feature-card">
@@ -70,12 +70,12 @@
 
       <div class="feature-card">
         <h3>Visual Insights</h3>
-        <p>Charts for species frequency, seasonal activity, bait effectiveness & catch history.</p>
+        <p>Explore data visualizations for: species frequency, catch history, bait effectiveness and average weight & length.</p>
       </div>
 
       <div class="feature-card">
         <h3>Searching</h3>
-        <p>Search & filter catches dynamically to analyze specific data ranges.</p>
+        <p>Search & filter catches dynamically to analyze specific data.</p>
       </div>
 
       <div class="feature-card">
@@ -91,7 +91,7 @@
   <h2>Tech Stack</h2>
 
   <!-- Frontend -->
-  <div class="skills-row">
+  <div class="skills-row fade-section" data-delay="0">
     <div class="skills-info">
       <h3>Frontend</h3>
       <p>Languages and frameworks used to build the UI and interactive features.</p>
@@ -105,10 +105,10 @@
   </div>
 
   <!-- Backend -->
-  <div class="skills-row reverse">
+  <div class="skills-row fade-section" data-delay="1">
     <div class="skills-info">
       <h3>Backend</h3>
-      <p>Server-side languages, frameworks, and hosting solutions.</p>
+      <p>Server-side languages, frameworks, and hosting services.</p>
     </div>
     <div class="skills-list">
       <div class="skill-card"><img src="../assets/logos/python_logo.png" alt="Python"><span>Python</span></div>
@@ -118,7 +118,7 @@
   </div>
 
   <!-- Database -->
-  <div class="skills-row">
+  <div class="skills-row fade-section" data-delay="2">
     <div class="skills-info">
       <h3>Database</h3>
       <p>Data storage and management technologies.</p>
@@ -131,25 +131,37 @@
 </section>
 
 <!-- ================= CAROUSEL ================= -->
- <section class="carousel">
+ <section class="carousel fade-section">
   <h2>Project Images</h2>
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="../assets/screenshots/castiq/CatchesByBaitChart.png" alt="Catches by bait">
-      <div class="caption">Catch data by bait type</div>
+      <div class="numbertext">1 / 5</div>
+      <img src="../assets/screenshots/castiq/FrontPage.png" alt="Catches by bait">
+      <div class="caption">Front Page showcasing input fields and a users catches.</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="../assets/screenshots/castiq/EditCatch.png" alt="Edit catch screen">
-      <div class="caption">Editing catch details</div>
+      <div class="numbertext">2 / 5</div>
+      <img src="../assets/screenshots/castiq/Searching.PNG" alt="Edit catch screen">
+      <div class="caption">A user searching for all their catches on March 14th, 2025.</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="../assets/screenshots/castiq/FrontPage.png" alt="Home page">
-      <div class="caption">CastIQ homepage overview</div>
+      <div class="numbertext">3 / 5</div>
+      <img src="../assets/screenshots/castiq/EditCatch.PNG" alt="Home page">
+      <div class="caption">A user editing their catfish they caught on the Lake Erie Pier.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="../assets/screenshots/castiq/SpeciesCaughtChart.PNG" alt="Home page">
+      <div class="caption">A user viewing their species-caught chart to see what fish they have caught the most.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="../assets/screenshots/castiq/CatchesByBaitChart.PNG" alt="Home page">
+      <div class="caption"> A user viewing their catches-by-bait chart to see what bait caught the most fish.</div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -160,6 +172,8 @@
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
   </div>
 </section>
 
