@@ -571,6 +571,23 @@ h3{
   font-size: 1.15rem;
 }
 
+.projects {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.05) 0 60px, transparent 61px),
+    radial-gradient(circle at 7% 90%, rgba(37, 99, 235, 0.05) 0 70px, transparent 71px),
+    radial-gradient(circle at 80% 93%, rgba(37, 99, 235, 0.05) 0 50px, transparent 51px);
+  z-index: -1;
+}
+
 
 
 /* ================= CONTACT ================= */
