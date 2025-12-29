@@ -14,6 +14,22 @@ body {
   background-color: #f8fafc;
 }
 
+h2{
+  font-size: 2.5rem;
+}
+
+h3{
+  margin-bottom: 0.25rem;
+  color: #2563eb;
+  font-size: 1.3rem;
+}
+
+p{
+  color: black;
+  font-size: 1.15rem;
+}
+
+
 #main-page{
   position: relative;
   background: linear-gradient(
@@ -130,7 +146,7 @@ nav a:hover::after {
 }
 
 .LP-container {
-  max-width: 1400px;
+  max-width: 1360px;
   width: 100%;
   margin: auto;
 
@@ -258,15 +274,7 @@ nav a:hover::after {
   padding: 4rem 2rem;
 }
 
-.section h2 {
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
-}
-
 /* ================= ABOUT ME ================= */
-h3{
-  font-size: 1.3rem;
-}
 
 .about-text .greeting {
   font-size: 1.75rem;
@@ -274,17 +282,15 @@ h3{
   font-weight: 500;
 }
 
+.greeting{
+  padding-bottom: 1rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
   gap: 3rem;
   margin-top: 2rem;
-}
-
-.about-grid p {
-  margin-bottom: 1.5rem;
-  max-width: 60ch;
-  font-size: 1.15rem;
 }
 
 .resume-callout {
@@ -355,11 +361,6 @@ h3{
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
 }
 
-.highlight-card h3 {
-  margin-bottom: 0.25rem;
-  color: #2563eb;
-}
-
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -414,12 +415,6 @@ h3{
   color: #2563eb;
   margin-bottom: 0.25rem;
   font-size: 1.4rem;
-}
-
-.skills-info p {
-  color: black;
-  max-width: 30ch;
-  font-size: 1.15rem;
 }
 
 .skills-list {
@@ -539,9 +534,12 @@ h3{
 /* Project image */
 .project-img {
   width: 100%;
-  height: 250px;
-  object-position: top;
+  aspect-ratio: 2 / 1;
+  height: auto;
+
   object-fit: cover;
+  object-position: top;
+
   border-radius: 0.75rem;
   margin-bottom: 1rem;
   filter: drop-shadow(0 4px 6px rgba(37, 99, 235, 0.15));
@@ -558,12 +556,6 @@ h3{
   font-size: 1.75rem;
   margin-bottom: 0.25rem;
   color: #2563eb;
-}
-
-.project-card p {
-  font-size: 1.15rem;
-  line-height: 1.4;
-  color: #0f172a;
 }
 
 .tech-label {
@@ -606,7 +598,6 @@ h3{
 .contact-text {
   max-width: 600px;
   margin: 0 auto 2rem;
-  font-size: 1.15rem;
   line-height: 1.6;
 }
 .contact-header{
@@ -638,7 +629,7 @@ h3{
   display: grid;
   gap: 1rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -646,8 +637,8 @@ h3{
 .btn-contact {
   display: inline-block;
   margin-top: 1rem;
-  width: 300px;
-
+  width: 100%;
+  max-width: 300px;
   padding: .75rem 1rem;
   text-decoration: none;
   border-radius: 4px;
@@ -695,4 +686,212 @@ h3{
   text-align: center;
   padding: 2rem;
   border-top: 1px solid #e2e8f0;
+}
+
+/* ================= RESPONSIVENESS ================= */
+@media (max-width: 1360px){
+  .LP-container {
+    max-width: 980px;
+  }
+
+  .LP-text h1 {
+    font-size: 5.5rem;
+  }
+
+  .LP-text h2 {
+    font-size: 3.5rem;
+  }
+
+  .profile-photo {
+    width: 450px;
+    height: 450px;
+    border: 4px solid #2563eb;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .LP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .LP-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 700px;
+  }
+
+  .LP-text {
+    max-width: 100%;
+  }
+
+  .LP-text h1 {
+    font-size: 4.5rem;
+  }
+
+  .LP-text h2 {
+    font-size: 3rem;
+  }
+
+  .LP-buttons {
+    justify-content: center;
+  }
+
+  .profile-photo {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 800px) {
+  .h2 {
+    font-size: 1.75rem;
+  }
+  .profile-photo {
+    width: 350px;
+    height: 350px;
+  }
+  .LP-text h1 {
+    font-size: 4rem;
+  }
+
+  .LP-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    margin-top: 14px;
+    font-size: 1.25rem;
+  }
+
+  h3{
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1.05rem;
+  }
+  
+  .about-text .greeting {
+    font-size: 1.5rem;
+  }
+
+  .resume-callout h3 {
+    font-size: 1.25rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .highlight-card {
+    flex: 1 1 200px;
+    max-width: 250px;
+  }
+
+  .btn-resume {
+    width: 225px;
+    padding: .5rem .75rem;
+    font-size: 1.3rem;
+  }
+
+  .resume-callout h3{
+    font-size: 1.3rem;
+  }
+
+  .skill-card {
+    border-radius: 10px;
+
+    padding: .75rem 0.25rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .skill-card span {
+    font-size: .9rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  .skill-card img {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 4px 6px rgba(37, 99, 235, 0.25));
+    transition: transform 0.25s ease;
+  }
+
+  .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 600px;
+      justify-self: center;
+  }
+
+  .btn-contact {
+    font-size: 1.2rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+@media (max-width: 700px){
+  .contact-buttons {
+    grid-template-columns: 1fr;
+    justify-items: center; /* center the buttons */
+  }
+  .btn-contact {
+    max-width: 400px;  /* let them stretch if needed */
+    font-size: 1.3rem;
+    padding: 0.7rem 1rem;
+  }
+  
+  /*navbar smaller text
+  and about cards vertical
+  */
+}
+
+@media (max-width: 480px) {
+  .LP-text h1 { font-size: 3rem; }
+  .LP-text h2 { font-size: 2rem; }
+  .LP-text h3 { font-size: 1.3rem; }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-contact {
+    padding: 0.6rem;
+    font-size: 1.1rem;
+  }
 }
