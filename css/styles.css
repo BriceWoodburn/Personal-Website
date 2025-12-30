@@ -716,6 +716,11 @@ nav a:hover::after {
   align-items: center;
 }
 
+.footer-container p{
+  color: #f0f4f8;
+  font-size: 0.95rem;
+}
+
 .footer-links {
   display: flex;
   gap: 1.5rem;
