@@ -21,7 +21,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 }
+  { threshold: 0.15 }
 );
 
 faders.forEach(el => observer.observe(el));
