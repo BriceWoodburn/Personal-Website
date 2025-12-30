@@ -165,6 +165,23 @@ nav a:hover::after {
   transform-origin: left;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
 /* ================= title ================= */
 
 .project-container {
@@ -318,6 +335,7 @@ nav a:hover::after {
 /* Skill cards */
 .skills-list {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   gap: 1.25rem;
 }
@@ -389,9 +407,11 @@ nav a:hover::after {
 /* Slide images */
 .mySlides img {
   width: 100%;
-  height: 550px;
+  height: auto;
+  aspect-ratio: 2 / 1;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+  max-height: 550px;
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
@@ -530,4 +550,222 @@ nav a:hover::after {
 .footer-links span {
   font-weight: 500;
   color: #f0f4f8;
+}
+
+
+/* ================= RESPONSIVENESS ================= */
+
+/* ----------- 900px ----------- */
+@media (max-width: 900px) {
+  .skill-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .overview-buttons-container {
+    flex-direction: column;
+  }
+
+  .overview-buttons{
+    width: 100%;
+  }
+
+  .overview{
+    align-self: center;
+    width: 70%;
+  }
+}
+
+/* ----------- 800px ----------- */
+@media (max-width: 800px) {
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  p  { font-size: 1.15rem; }
+
+  .project-title {
+    font-size: 4rem;
+  }
+
+  .skill-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn {
+    padding: .75rem 1rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+  }
+
+  .tech-stack {
+    padding-top: 2rem;
+  }
+}
+
+/* ----------- 700px ----------- */
+@media (max-width: 700px) {
+
+  .skills-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .skills-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .overview-buttons {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: .75rem 1rem;
+    border-radius: 4px;
+    font-size: 1.3rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem; 
+  }
+
+  .feature-card h3{
+    font-size: 1.4rem;
+  }
+
+  .feature-card p{
+    font-size: 1.1rem;
+  }
+
+  .caption {
+    font-size: 1.1rem;
+  }
+
+  .nav-container {
+    font-size: 1.2rem;
+  }
+  .name {
+    font-size: 1.2rem;
+  }
+}
+
+/* ----------- 600px: MOBILE NAV ----------- */
+@media (max-width: 600px) {
+  nav.nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  nav.nav-links a {
+    margin: 0.75rem 0;
+    font-size: 1.25rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
+  }
+
+  nav.nav-links.active {
+    display: flex;
+  }
+}
+
+/* ----------- 500px ----------- */
+@media (max-width: 500px) {
+
+  .project-title {
+    font-size: 3.5rem;
+  }
+
+  h2 { font-size:2rem; }
+  h3 { font-size: 1.4rem; }
+  p  { font-size: 1.05rem; }
+
+  .feature-card h3{
+    font-size: 1.4rem;
+  }
+
+  .feature-card p{
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+  }
+
+  .numbertext {
+  font-size: 0.8rem;
+  }
+
+  /* Arrows */
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+  }
+
+  .caption {
+    font-size: 1.05rem;
+  }
+
+  .overview{
+    align-self: center;
+    width: 90%;
+  }
+
+}
+
+/* ----------- 400px ----------- */
+@media (max-width: 400px) {
+
+  .project-title {
+    font-size: 3rem;
+  }
+
+  h2 { font-size:1.75rem; }
+
+  .skill-card {
+    padding: .5rem .25rem;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .overview{
+    align-self: center;
+    width: 90%;
+  }
 }
