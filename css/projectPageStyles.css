@@ -613,14 +613,18 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: left;
+    text-align: center;
   }
 
   .skills-list {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .skill-card{
+    padding: 1rem 0.75rem;
   }
 
   .overview-buttons {
@@ -760,7 +764,7 @@ nav a:hover::after {
   h2 { font-size:1.75rem; }
 
   .skill-card {
-    padding: .5rem .25rem;
+    padding: .75rem .50rem;
   }
 
   .skill-card img {
