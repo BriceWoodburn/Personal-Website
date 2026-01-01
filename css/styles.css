@@ -307,7 +307,7 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
   gap: 3rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .resume-callout {
@@ -376,6 +376,7 @@ nav a:hover::after {
 .highlight-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+  border-color: #2563eb;
 }
 
 .fade-in {
@@ -414,6 +415,10 @@ nav a:hover::after {
   gap: 3rem;
   align-items: center;
   margin-top: 4rem;
+}
+
+#row1{
+  margin-top: 1.5rem;
 }
 
 .skills-row.reverse {
@@ -521,7 +526,7 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .project-card {
@@ -600,18 +605,6 @@ nav a:hover::after {
 
 
 /* ================= CONTACT ================= */
-
-.contact {
-  max-width: 1100px;
-  margin: auto;
-  padding: 4rem 2rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-}
-
 .contact-text {
   max-width: 600px;
   margin: 0 auto 2rem;
@@ -624,7 +617,7 @@ nav a:hover::after {
 }
 
 .content {
-  margin: 3rem auto 0;
+  margin: 1.5rem auto 0;
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 
   padding: 2rem;
@@ -637,7 +630,8 @@ nav a:hover::after {
 }
 
 #email{
-  color:#2563eb
+  color:#2563eb;
+  text-decoration: none;
 }
 
 
@@ -731,9 +725,9 @@ nav a:hover::after {
 
 .footer-links a {
   color: #60a5fa;
-  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  text-decoration: underline;
 }
 
 .footer-links a:hover {
@@ -990,7 +984,7 @@ nav a:hover::after {
 @media (max-width: 600px) {
   nav.nav-links {
     position: absolute;
-    top: 70px;
+    top: 62.72px;
     right: 0;
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(8px);

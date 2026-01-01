@@ -52,7 +52,7 @@
         performance, species frequency, and seasonal trends that 
         they wouldn't otherwise have noticed. CastIQ offers a clean, 
         user-friendly, and fully responsive interface.
-      </p>
+      </p><br>
       <p>
         I created CastIQ to combine two things I love, fishing and 
         software development. Fishing has always been one of my favorite 
@@ -103,10 +103,10 @@
   <h2>Tech Stack</h2>
 
   <!-- Frontend -->
-  <div class="skills-row fade-section" data-delay="0">
+  <div class="skills-row fade-section" id="row1" data-delay="0">
     <div class="skills-info">
       <h3>Frontend</h3>
-      <p>Languages and frameworks used to build the UI and interactive features.</p>
+      <p>Languages and libraries used to build the UI and interactive features.</p>
     </div>
     <div class="skills-list">
       <div class="skill-card"><img src="../assets/logos/html_logo.png" alt="HTML"><span>HTML</span></div>
@@ -124,6 +124,7 @@
     </div>
     <div class="skills-list">
       <div class="skill-card"><img src="../assets/logos/python_logo.png" alt="Python"><span>Python</span></div>
+      <div class="skill-card"><img src="../assets/logos/sql_logo.png" alt="SQL"><span>SQL</span></div>
       <div class="skill-card"><img src="../assets/logos/fastapi_logo.svg" alt="FastAPI"><span>FastAPI</span></div>
       <div class="skill-card"><img src="../assets/logos/render_logo.png" alt="Render"><span>Render</span></div>
     </div>
@@ -148,32 +149,32 @@
   <div class="slideshow-container">
     <div class="mySlides fade">
       <div class="numbertext">1 / 5</div>
-      <img src="../assets/screenshots/castiq/FrontPage.png" alt="Landing Page">
-      <div class="caption">Front Page showcasing input fields and a users catches.</div>
+      <img src="../assets/screenshots/castiq/FrontPage.PNG" alt="Landing Page">
+      <div class="caption">Retrieves user-specific catch data from the database, ensuring every user's data is protected.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 5</div>
       <img src="../assets/screenshots/castiq/Searching.PNG" alt="Search feature">
-      <div class="caption">A user searching for all their catches on March 14th, 2025.</div>
+      <div class="caption">Performs filtered database queries to quickly locate catches by a specific parameter.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 5</div>
       <img src="../assets/screenshots/castiq/EditCatch.PNG" alt="Edit catch modal">
-      <div class="caption">A user editing their catfish they caught on the Lake Erie Pier.</div>
+      <div class="caption">Updates a specific database record based on user input.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">4 / 5</div>
       <img src="../assets/screenshots/castiq/SpeciesCaughtChart.PNG" alt="Species-caught chart">
-      <div class="caption">A user viewing their species-caught chart to see what fish they have caught the most.</div>
+      <div class="caption">Pulls catch data by bait type from the database to show which baits are most effective.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">5 / 5</div>
       <img src="../assets/screenshots/castiq/CatchesByBaitChart.PNG" alt="catches-by-bait chart">
-      <div class="caption"> A user viewing their catches-by-bait chart to see what bait caught the most fish.</div>
+      <div class="caption">Summarizes user catch records from the database to display the most frequently caught species.</div>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
